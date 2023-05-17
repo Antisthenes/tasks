@@ -20,7 +20,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-config = Config
+config = Config()
 
 
 def get_task_store() -> TaskStore:
