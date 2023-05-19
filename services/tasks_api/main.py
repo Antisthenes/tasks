@@ -66,7 +66,7 @@ def close_task(
     user_email: str = Depends(get_user_email),
     task_store: TaskStore = Depends(get_task_store),
 ):
-    task = task_store.get_by_id(task_id=str(parameters.id), owner=user_email)
+    task = task_store.get_by_id(task_id=parameters.id, owner=user_email)
     task.close()
     task_store.add(task)
 
